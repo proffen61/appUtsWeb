@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login and Registration</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .warning {
+      color: red;
+      display: none;
+    }
+
+    .kotak_sign_up a {
+      cursor: pointer;
+    }
+
+    .kotak_sign_up a:hover {
+      color: red;
+    }
+
+    .kotak_sign_up a:active {
+      color: #232323;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="kotak_login container">
+    <p class="tulisan_login">Silahkan login</p>
+    <form action="order.html" onsubmit="return submitForm();" id="login-form" class="form_login">
+      <label>Username</label>
+      <input type="text" name="username" class="form_login" placeholder="Username atau Email ..">
+      <label>Password</label>
+      <input type="password" name="password" class="form_login" placeholder="Password ..">
+      <input type="submit" class="tombol_login" value="LOGIN">
+      <br>
+      <br>
+      <div class="kotak_sign_up">
+        <p class="tulisan_login" id="sign-up-title" style="display: none;">Register</p>
+        <a class="link" href="#" onclick="showWarning()">Register</a>
+        <p class="warning" id="warning-text"></p>
+      </div>
+    </form>
+  </div>
+
+  <div class="kotak_login container" style="display: none;">
+    <p class="tulisan_login" id="sign-up-title">Register</p>
+    <form id="register-form" class="form_login">
+      <label>Full Name</label>
+      <input type="text" name="fullname" class="form_sign_up" placeholder="Nama Lengkap ..">
+      <label>Username</label>
+      <input type="text" name="username" class="form_sign_up" placeholder="Username ..">
+    </form>
+  </div>
+
+  <script>
+    function showWarning() {
+      document.getElementById("warning-text").style.display = "block";
+      document.querySelector(".kotak_sign_up a.link").innerHTML = "Tombol telah hangus";
+    }
+
+    function submitForm() {
+      const warningTextElement = document.getElementById("warning-text");
+      warningTextElement.innerText = ""; // Clear any existing warning messages
+
+      const usernameInput = document.querySelector('input[name="username"]');
+      const passwordInput = document.querySelector('input[name="password"]');
+
+      if (usernameInput.value !== 'tester') {
+        warningTextElement.innerText += "Invalid username.";
+        warningTextElement.style.display = "block";
+        return false;
+      }
+
+      if (passwordInput.value !== 'manakutahu') {
+        warningTextElement.innerText += "Invalid password.";
+        warningTextElement.style.display = "block";
+        return false;
+      }
+
+      return true;
+    }
+  </script>
+
+</body>
+</html>

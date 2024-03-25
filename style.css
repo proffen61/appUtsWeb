@@ -1,0 +1,151 @@
+/* style.css */
+body {
+  font-family: sans-serif;
+  background: #d5f0f3;
+}
+
+.kotak_login {
+  width: 350px;
+  background: white;
+  margin: 80px auto;
+  padding: 30px 20px;
+  box-shadow: 0px 10px 15px 1px rgba(0, 0, 0, 0.1);
+}
+
+.form_login,
+label {
+  font-size: 11pt;
+  color: #232323;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+
+.form_login {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.tombol_login {
+  background: #46de4b;
+  color: white;
+  font-size: 11pt;
+  width: 100%;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.link {
+  color: #232323;
+  text-decoration: none;
+  font-size: 10pt;
+  display: block;
+  margin-top: 10px;
+}
+
+.tulisan_login {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.cart-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center; /* Align items vertically */
+}
+
+.cart-total {
+  font-weight: bold;
+}
+
+#place-order-btn {
+  background-color: #46de4b; /* Green background color */
+  color: white;
+  font-size: 11pt;
+  width: auto; /* Adjust width automatically */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px; /* Add space between buttons */
+}
+
+#reset-btn {
+  background-color: #46de4b; /* Green background color */
+  color: white;
+  font-size: 11pt;
+  width: auto; /* Adjust width automatically */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px; /* Add space between buttons */
+}
+
+#place-order-btn:hover,
+#reset-btn:hover {
+  background-color: #3e8e41; /* Darker green color on hover */
+}
+
+/* Preserve original styles for the "Your Cart" section */
+.cart {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  max-width: 300px;
+  overflow-y: auto;
+}
+
+.menu-item {
+  background-color: #fff; /* White background */
+  border: 1px solid #ccc; /* Border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 20px; /* Padding */
+  margin-bottom: 20px;
+}
+
+.menu-item h2 {
+  margin-top: 0;
+}
+
+.add-to-cart {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.add-to-cart:hover {
+  background-color: #3e8e41;
+}
+
+#notification {
+  display: none; /* Initially hidden */
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #46de4b;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Show the notification message when the "Place Order" button is clicked */
+#place-order-btn {
+  display: none; /* Initially hidden */
+}
